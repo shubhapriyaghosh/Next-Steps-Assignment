@@ -14,7 +14,7 @@ Data Chunking and Embedding
 After scraping, the data is chunked into sentences and converted into embeddings using a pre-trained model from the sentence-transformers library.
 
 Key Components:
-Sentence Embeddings: Uses the paraphrase-MiniLM-L6-v2 model for efficient embedding generation.
+Sentence Embeddings: Train word2vec embeddings.
 Clustering: Clusters the sentences using KMeans clustering to group similar sentences together.
 Hybrid Retrieval
 A hybrid retrieval method is implemented to retrieve relevant data based on a query. It combines semantic similarity using embeddings and clustering results.
@@ -23,8 +23,7 @@ Key Components:
 Cosine Similarity: Computes the similarity between the query embedding and the sentence embeddings.
 Heap Queue: Retrieves the top k most similar sentences based on cosine similarity.
 Question Answering
-The retrieved and re-ranked data is passed to a question-answering model to generate answers. The distilbert-base-uncased-distilled-squad model from the transformers library is used for this purpose.
-
+The retrieved and re-ranked data is passed to a question-answering model to generate answers. 
 Key Components:
 Question Answering Pipeline: Uses the pipeline function from transformers to create a question-answering pipeline.
 Context Generation: Joins the retrieved sentences to form a context for the QA model.
