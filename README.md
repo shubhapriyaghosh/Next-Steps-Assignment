@@ -29,7 +29,7 @@ Key Components:
 Question Answering Pipeline: Uses the pipeline function from transformers to create a question-answering pipeline.
 Context Generation: Joins the retrieved sentences to form a context for the QA model.
 Running the Script
-Open VS Code or any other IDE.
+
 
 Create a new Python file
 
